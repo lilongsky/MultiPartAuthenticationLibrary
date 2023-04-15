@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Second Auth</title>
+    <script type="module" src="script/LoginSecond.js"></script>
+</head>
+<body>
+<div id="login">
+    <form id="login_form">
+        <b>Authenticator Code: </b> <input type="number" id="TOTP" name="TOTP">
+        <b>SMS Code: </b> <input type="number" id="SMS-OTP" name="SMS-OTP">
+        <input type="button" id="SMSSender" value="Send SMS Code">
+        <b>Email Code: </b> <input type="number" id="EmailOTP" name="EmailOTP">
+        <input type="button" id="EmailSender" value="Send Email Code">
+        <b>Backup Code: </b> <input type="number" id="BackupCode" name="BackupCode">
+        <input type="button" id="submitButton" value="login in">
+    </form>
+</div>
+
+</body>
+</html>
