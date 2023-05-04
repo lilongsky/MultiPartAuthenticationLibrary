@@ -39,6 +39,7 @@ build/
 
 ### Safety ###
 src/main/java/com/example/multipartauthenticationApplication/secret.java
+src/main/java/com/example/multipartauthenticationApplication/database.java
 
 ### not useful ###
 src/main/webapp/script/jquery-3.6.3.js

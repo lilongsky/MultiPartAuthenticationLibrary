@@ -7,7 +7,6 @@ $(document).ready(function (){
         .done(function (data) {
             console.log(data);
             if (data.statues === 200){
-                AuthType = data.AuthType;
             }else if (data.statues === 302){
                 window.location.replace("./index.html")
             } else{
@@ -54,7 +53,16 @@ $(document).ready(function (){
 
             $('#submitButton').click(function (){
                 loginlib.LoginSecond(AuthType,"TOTP","SMS-OTP",
-                    "EmailOTP","BackupCode","login-second")
+                    "EmailOTP","BackupCode","login-second").then(data => {
+                    if (data.statues === 302) {
+                        console.log(data);
+                        window.location.replace(data.location);
+                    }
+                    else{
+                        alert(data.message);
+                    }
+                    }
+                )
             })
         }
     )
